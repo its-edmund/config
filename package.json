@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "prettier": "./packages/prettier-config",
+  "standard-version": {
+    "scripts": {
+      "prerelease": "yarn test"
+    }
+  },
+  "scripts": {
+    "format": "prettier --write './**/*.{js,ts,json,yml,yaml,css,html}'",
+    "release": "standard-version",
+    "test": "yarn workspaces run test",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
+    "prettier": "^2.5.1",
+    "standard-version": "^9.3.2",
+    "syncpack": "^6.2.0",
+    "tape": "^5.5.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,yml,yaml,css,html}": [
+      "prettier --write"
+    ]
+  }
+}

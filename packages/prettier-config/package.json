@@ -1,0 +1,35 @@
+{
+  "name": "@its-edmund/prettier-config",
+  "version": "0.0.1",
+  "description": "Shareable Prettier config",
+  "private": false,
+  "homepage": "https://github.com/its-edmund/config",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/its-edmund/config",
+    "directory": "packages/prettier-config"
+  },
+  "bugs": {
+    "url": "https://github.com/its-edmund/config/issues"
+  },
+  "keywords": [
+    "prettier",
+    "prettierrc"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run test",
+    "test": "tape __tests__/*.js"
+  },
+  "peerDependencies": {
+    "prettier": ">=2.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "tape": "^5.5.0"
+  }
+}

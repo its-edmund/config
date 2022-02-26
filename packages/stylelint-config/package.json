@@ -1,0 +1,41 @@
+{
+  "name": "@its-edmund/stylelint-config",
+  "version": "1.2.4",
+  "description": "Shareable Stylelint config",
+  "private": false,
+  "homepage": "https://github.com/its-edmund/config",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/its-edmund/config",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/its-edmund/config/issues"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelintrc"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run test",
+    "test": "tape __tests__/*.js",
+    "output": "stylelint --config=.stylelintrc.json --print-config output.json > output.json"
+  },
+  "peerDependencies": {
+    "stylelint": ">=13.13"
+  },
+  "devDependencies": {
+    "stylelint": "^14.3.0",
+    "tape": "^5.5.0"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^24.0.0"
+  }
+}
