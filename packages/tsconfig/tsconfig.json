@@ -65,6 +65,18 @@
     //
     /* Advanced Options */
     "skipLibCheck": true /* Skip type checking of declaration files. */,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+    "rules": {
+      "import/extensions": [
+        1,
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
+    }
   }
 }
